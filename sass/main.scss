@@ -1,0 +1,116 @@
+@use './colors' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	min-height: 100vh;
+	font-family: 'League Spartan', sans-serif;
+	font-size: 15px;
+	background: url('../images/bg-pattern-top-mobile.svg') top left no-repeat,
+		url('../images/bg-pattern-bottom-mobile.svg') bottom right no-repeat;
+	background-size: 100%, 100% 50%;
+}
+
+.box {
+	margin: 50px auto;
+	width: 90%;
+	min-height: 90vh;
+	text-align: center;
+
+	&__text {
+		margin: 20px 0;
+	}
+
+	&__main {
+		font-size: 40px;
+		line-height: 32px;
+		color: $verydarkmagenta;
+	}
+
+	&__description {
+		margin: 20px 0;
+		font-size: 18px;
+        font-weight: 500;
+		color: $darkgrayishmagenta;
+	}
+
+	&__ratings {
+		margin: 30px 0;
+	}
+
+	&__rating-box {
+		margin-top: 15px;
+		padding: 10px;
+		background-color: $lightgrayishmagenta;
+		border-radius: 8px;
+
+		h3 {
+			color: $verydarkmagenta;
+		}
+	}
+
+	&__stars {
+		margin: 10px auto;
+		height: 22px;
+		width: 120px;
+
+        img {
+            padding: 0 2px;
+        }
+	}
+
+	&__comment-box {
+		margin: 15px 0;
+		padding: 30px;
+		text-align: left;
+		background-color: $verydarkmagenta;
+		color: $lightgrayishmagenta;
+		border-radius: 8px;
+	}
+
+	&__author {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+
+        img{
+            margin-right: 20px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        span {
+            color: $softpink;
+            letter-spacing: 1px;
+        }
+	}
+
+    &__content{
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+
+	a {
+		color: $darkgrayishmagenta;
+	}
+}
+
+@import './desktop';
